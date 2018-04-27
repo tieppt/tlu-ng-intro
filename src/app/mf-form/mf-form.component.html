@@ -1,0 +1,14 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="mf">
+  <mat-form-field class="">
+    <input matInput placeholder="Card Number" formControlName="cardNumber">
+  </mat-form-field>
+  <mat-form-field class="">
+    <input matInput placeholder="CSC" formControlName="csc">
+  </mat-form-field>
+
+  <p>
+    <button mat-raised-button color="primary"
+      [disabled]="!mf.valid"
+    >Submit</button>
+  </p>
+</form>
